@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webApi2_Produtos", "webApi2_Produtos\webApi2_Produtos.csproj", "{6FFBF935-9A31-4C7B-821B-4A2D12CA10DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webApi2_ProdutosEstudantes", "webApi2_Produtos\webApi2_ProdutosEstudantes.csproj", "{6FFBF935-9A31-4C7B-821B-4A2D12CA10DB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webAspMVC", "webASP\webAspMVC.csproj", "{AD6454B7-9EAE-46F5-8ABB-8AAD1DB148FF}"
 EndProject
