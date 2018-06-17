@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webAspMVC", "webASP\webAspM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webASPWebForms", "webASPWebForms\webASPWebForms.csproj", "{942A4511-8A58-4063-A76E-38B323020D32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webASPWebFormsAPI", "webASPWebFormsAPI\webASPWebFormsAPI.csproj", "{B7583808-E30A-41ED-9D26-01456D2D42F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{942A4511-8A58-4063-A76E-38B323020D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{942A4511-8A58-4063-A76E-38B323020D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{942A4511-8A58-4063-A76E-38B323020D32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7583808-E30A-41ED-9D26-01456D2D42F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7583808-E30A-41ED-9D26-01456D2D42F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7583808-E30A-41ED-9D26-01456D2D42F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7583808-E30A-41ED-9D26-01456D2D42F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
