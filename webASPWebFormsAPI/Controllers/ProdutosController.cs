@@ -11,7 +11,7 @@ namespace webASPWebFormsAPI.Controllers
     public class ProdutosController : ApiController
     {
         static readonly IProdutoRepositorio repositorio = new ProdutoRepositorio();
-
+        
         public IEnumerable<Produto> GetAllProdutos()
         {
             return repositorio.GetAll();
@@ -25,10 +25,10 @@ namespace webASPWebFormsAPI.Controllers
             }
             return item;
         }
-
-        public IEnumerable<Produto> GetProdutosPorCategoria(string categoria)
+                
+        public IEnumerable<Produto> GetProdutosPorPreco(double preco)
         {
-            return repositorio.GetAll().Where(p => string.Equals(p.Categoria, categoria, StringComparison.OrdinalIgnoreCase));
+            return repositorio.GetAll().Where(p => p.Preco > preco);
         }
 
         public HttpResponseMessage PostProduto(Produto item)
