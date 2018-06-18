@@ -8,24 +8,25 @@ namespace webAPI_SQL.Controllers
 {
     public class ProdutosController : ApiController
     {
-        private readonly IProdutoRepositorio _produtoRepositorio;
+        static  IProdutoRepositorio repositorio;
 
         public ProdutosController()
         {
-            _produtoRepositorio = new ProdutoRepositorio();
+             repositorio = new ProdutoRepositorio();
         }
+
 
         //GET: api/Produtos
         [HttpGet]
         public IEnumerable<Produto> List()
         {
-            return _produtoRepositorio.All;
+            return repositorio.All;
         }
 
         //GET: api/Produtos/5
         public Produto GetProduto(int id)
         {
-            var produto = _produtoRepositorio.Find(id);
+            var produto = repositorio.Find(id);
 
             if (produto == null)
             {
@@ -35,10 +36,10 @@ namespace webAPI_SQL.Controllers
         }
 
         //POST: api/Produtos
-        [HttpPost()]
+        [HttpPost]
         public void Post([FromBody]Produto produto)
         {
-            _produtoRepositorio.Insert(produto);
+            repositorio.Insert(produto);
         }
 
         //PUT: api/Produtos/5
@@ -46,14 +47,14 @@ namespace webAPI_SQL.Controllers
         public void Put(int id, [FromBody]Produto produto)
         {
             produto.ID = id;
-            _produtoRepositorio.Update(produto);
+            repositorio.Update(produto);
         }
 
         //DELETE: api/Produtos/5
         [HttpDelete()]
         public void Delete(int id)
         {
-            _produtoRepositorio.Delete(id);
+            repositorio.Delete(id);
         }
     }
 }

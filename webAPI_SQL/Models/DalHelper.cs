@@ -79,7 +79,7 @@ namespace webAPI_SQL.Models
             int reg = 0;
             using(SqlConnection con = new SqlConnection(GetStringConexao()))
             {
-                string sql = "INSERT INTO Tab_Produtos(Prod_Nome, Prod_Descricao, Prod_Preco, Prod_Estoque) VALUES (@nome, @descricao, @preco, @estoque)";
+                string sql = "INSERT INTO TabProdutos(Prod_ID, Prod_Nome, Prod_Descricao, Prod_Preco, Prod_Estoque) VALUES ((SELECT COALESCE(MAX(Prod_ID), 0) + 1 AS ID FROM TabProdutos), @nome, @descricao, @preco, @estoque)";
                 using(SqlCommand cmd = new SqlCommand(sql, con))
                 {
                     cmd.CommandType = CommandType.Text;
@@ -100,7 +100,7 @@ namespace webAPI_SQL.Models
             int reg = 0;
             using (SqlConnection con = new SqlConnection(GetStringConexao()))
             {
-                string sql = "UPDATE Tab_Produtos SET Prod_Nome = @nome, Prod_Descricao = @descricao, Prod_Preco = @preco, Prod_Estoque = @estoque WHERE Prod_Id = @id";
+                string sql = "UPDATE TabProdutos SET Prod_Nome = @nome, Prod_Descricao = @descricao, Prod_Preco = @preco, Prod_Estoque = @estoque WHERE Prod_Id = @id";
                 using (SqlCommand cmd = new SqlCommand(sql, con))
                 {
                     cmd.CommandType = CommandType.Text;
@@ -122,7 +122,7 @@ namespace webAPI_SQL.Models
             int reg = 0;
             using (SqlConnection con = new SqlConnection(GetStringConexao()))
             {
-                string sql = "DELETE Tab_Produtos WHERE Prod_Id = @id";
+                string sql = "DELETE TabProdutos WHERE Prod_Id = @id";
                 using (SqlCommand cmd = new SqlCommand(sql, con))
                 {
                     cmd.CommandType = CommandType.Text;
